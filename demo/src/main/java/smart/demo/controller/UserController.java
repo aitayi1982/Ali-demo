@@ -28,7 +28,8 @@ public class UserController {
 	@RequestMapping("/users/{currPage}/{pageSize}")
 	public String listUsrs(Model model, @PathVariable("currPage") int currPage,
 			@PathVariable("pageSize") int pageSize) {
-
+		//Added in dev branche
+		System.out.print("In listUsers Function..");
 		List<Usr> usrs = this.usrDAO.listUsrsByPage(currPage, pageSize);
 		model.addAttribute("name", usrs);
 		return "users";
